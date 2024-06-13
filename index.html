@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img class="header-img" src="cloud.svg" alt="cloud">
+
+            Forecast
+        </h1>
+    </header>
+
+    <main>
+        <section class="geo">
+            <div class="geo-coords-container">
+                <h2 class="geo-coords-text"></h2>
+                <p class="geo-coords"></p>
+            </div>
+            <input type="text" placeholder="Search geolocation">
+        </section>
+
+        <section class="forecast">
+            <ul class="forecast-container">
+                <li class="weather-item">
+                    <a href="" class="weather-item-link" data-type="today"></a>
+                    <ul class="forecast-list">
+                        <li class="weather-item-list">
+                            <p class="next-date-weekday"></p>
+                            <p class="next-date-time"></p>
+                        </li>
+                        <li class="next-day-weather-list">
+                            <p class="next-day-temperature"></p>
+                            <p class="next-day-humidity"></p>
+                            <p class="next-day-humidity-description"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="weather-item">
+                    <a href="" class="weather-item-link" data-type="tomorrow"></a>
+                    <ul class="forecast-list">
+                        <li class="weather-item-list">
+                            <p class="next-date-weekday"></p>
+                            <p class="next-date-time"></p>
+                        </li>
+                        <li class="next-day-weather-list">
+                            <p class="next-day-temperature"></p>
+                            <p class="next-day-humidity"></p>
+                            <p class="next-day-humidity-description"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="weather-item">
+                    <a href="" class="weather-item-link" data-type="dayAfterTomorrow"></a>
+                    <ul class="forecast-list">
+                        <li class="weather-item-list">
+                            <p class="next-date-weekday"></p>
+                            <p class="next-date-time"></p>
+                        </li>
+                        <li class="next-day-weather-list">
+                            <p class="next-day-temperature"></p>
+                            <p class="next-day-humidity"></p>
+                            <p class="next-day-humidity-description"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="weather-item">
+                    <a href="" class="weather-item-link" data-type="dayAfterTomorrowAfter"></a>
+                    <ul class="forecast-list">
+                        <li class="weather-item-list">
+                            <p class="next-date-weekday"></p>
+                            <p class="next-date-time"></p>
+                        </li>
+                        <li class="next-day-weather-list">
+                            <p class="next-day-temperature"></p>
+                            <p class="next-day-humidity"></p>
+                            <p class="next-day-humidity-description"></p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="weather-item">
+                    <a href="" class="weather-item-link" data-type="dayAfterTomorrowAfterTomorrow"></a>
+                    <ul class="forecast-list">
+                        <li class="weather-item-list">
+                            <p class="next-date-weekday"></p>
+                            <p class="next-date-time"></p>
+                        </li>
+                        <li class="next-day-weather-list">
+                            <p class="next-day-temperature"></p>
+                            <p class="next-day-humidity"></p>
+                            <p class="next-day-humidity-description"></p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="hours-forecast">
+            <ul class="hours-forecast-container"></ul>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

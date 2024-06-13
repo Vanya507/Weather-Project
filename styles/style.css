@@ -1,0 +1,227 @@
+body {
+    color: #fff;
+    background-color: #000;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.header-img {
+    vertical-align: middle;
+    animation-name: logoImages;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logoImages {
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(0);
+    }
+
+    25% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(0);
+    }
+
+    75% {
+        transform: scale(1);
+    }
+
+    85% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.geo {
+    max-width: 960px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.geo-coords-container {
+    min-height: 40px;
+}
+
+input {
+    margin: 25px 0;
+    width: 99%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: #313342;
+    transition: 0.5s;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #7e6e6e;
+    transform: translate(0, -10px);
+}
+
+.forecast-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+.hours-forecast-container,
+.hours-forecast-container-two {
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+.forecast-list img {
+    display: block;
+    margin: auto;
+}
+
+.forecast-item {
+    width: 200px;
+    background-color: #ffffffb8;
+    border-radius: 11px;
+    transition: 0.5s;
+}
+
+.forecast-item:hover {
+    transform: scale(0.9);
+    border: 1px solid #fff;
+    border-radius: 15px;
+}
+
+.weather-container {
+    padding: 15px;
+}
+
+.current-date {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #000000d4;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 13px;
+}
+
+.current-location {
+    font-size: 27px;
+    color: #313342;
+    font-weight: bold;
+}
+
+.current-city {
+    font-size: 27px;
+    text-transform: uppercase;
+}
+
+.current-location-temperature {
+    font-size: 35px;
+}
+
+.current-humidity {
+    color: #245a5b;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.current-humidity-description,
+.hours-forecast-humidity-description,
+.next-day-humidity-description {
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.current-second p,
+.current-location p {
+    margin-top: 10px;
+}
+
+.weather-item {
+    padding: 15px;
+    border-radius: 5%;
+    width: 165px;
+    text-align: center;
+    position: relative;
+    transition: 0.5s;
+}
+
+.hours-forecast-item {
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    background-color: #1a1919;
+    margin: 20px;
+    width: calc(100% / 12* 3 - 40px);
+    padding: 20px 10px;
+}
+
+.weather-item-link,
+.weather-item-link-two {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hours-forecast {
+    background: linear-gradient(90deg, rgb(31, 30, 30) 0%, rgba(80, 75, 75, 1) 51%, rgb(32, 36, 36) 100%);;
+}
+
+.weather-item p,
+.hours-forecast-item p {
+    margin-top: 15px;
+}
+
+.weather-item:hover,
+.hours-forecast-item:hover {
+    transform: scale(0.9);
+    border: 1px solid #fff;
+    border-radius: 15px;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .forecast-item,
+    .weather-item,
+    .hours-forecast-item {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .forecast-item {
+        width: 100%;
+    }
+}
