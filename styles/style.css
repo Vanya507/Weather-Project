@@ -208,7 +208,7 @@ input:focus {
 
 .weather-item p,
 .hours-forecast-item p {
-    margin-top: 14px;
+    margin-top: 13px;
 }
 
 .weather-item:hover,
