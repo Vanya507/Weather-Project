@@ -9,21 +9,21 @@
 //     desc,
 // }) {
 //     return `
-//        <li class="weather-item">
-//             <a href="#" class="weather-item-link" data-type="${dataType}"></a>
-//             <ul class="forecast-list">
-//                 <li class="weather-item-list">
-//                     <p class="next-date-weekday">${week}</p>
-//                     <p class="next-date-time">${date} at ${time}</p>
-//                 </li>
-//                 <li class="next-day-weather-list">
-//                     <img src="https://openweathermap.org/img/w/${icon}.png" alt="weather">
-//                     <p class="next-day-temperature">${temp}</p>
-//                     <p class="next-day-humidity">${humidity}</p>
-//                     <p class="next-day-humidity-description">${desc}</p>
-//                 </li>
-//             </ul>
-//         </li>
+    //    <li class="weather-item">
+    //         <a href="#" class="weather-item-link" data-type="${dataType}"></a>
+    //         <ul class="forecast-list">
+    //             <li class="weather-item-list">
+    //                 <p class="next-date-weekday">${week}</p>
+    //                 <p class="next-date-time">${date} at ${time}</p>
+    //             </li>
+    //             <li class="next-day-weather-list">
+    //                 <img src="https://openweathermap.org/img/w/${icon}.png" alt="weather">
+    //                 <p class="next-day-temperature">${temp}</p>
+    //                 <p class="next-day-humidity">${humidity}</p>
+    //                 <p class="next-day-humidity-description">${desc}</p>
+    //             </li>
+    //         </ul>
+    //     </li>
 //         `;
 // }
 
@@ -112,7 +112,7 @@ export function getNextDayHumidity(data) {
 }
 
 export function showWeatherImg(data) {
-    const nextDayWeatherList = document.querySelectorAll(".next-day-weather-list");
+    const nextDayWeatherList = document.querySelectorAll(".next-day-weather-img");
 
     nextDayWeatherList.forEach((element, i) => {
         const weatherImg = document.createElement("img");
@@ -121,6 +121,11 @@ export function showWeatherImg(data) {
         element.prepend(weatherImg);
     });
 }
+
+
+
+
+
 
 
 

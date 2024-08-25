@@ -27,7 +27,6 @@ function weatherHTMLTemplate({
 
 export function generateForecastHTML(data) {
 
-
     const today = new Date();
     const todayDateStr = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
 

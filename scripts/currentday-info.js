@@ -1,15 +1,14 @@
 function currentWeatherHTMLTemplate({
-    week,
-    date,
-    time,
-    city,
-    country,
-    temp,
-    humidity,
-    desc
+  week,
+  date,
+  time,
+  city,
+  country,
+  temp,
+  humidity,
+  desc,
 }) {
-    return `
-        <li class="forecast-item">
+  return `
             <ul class="current-weather-list">
                 <li class="current-date">
                     <p class="current-date-weekday">${week}</p>
@@ -27,25 +26,22 @@ function currentWeatherHTMLTemplate({
                     </li>
                 </div>
             </ul>
-        </li>
     `;
 }
 
-const container = document.querySelector(".forecast-container");
+const container = document.querySelector(".forecast-item");
 export function generateCurrentForecastHTML(data) {
+  const now = new Date();
 
-    const now = new Date();
-
-    const forecastItem = currentWeatherHTMLTemplate({
-        week: now.toLocaleString('en-US', { weekday: 'long' }),
-        date: now.toLocaleString('en-US', { month: 'long', day: 'numeric' }),
-        time: now.toLocaleString('en-US', { hour: 'numeric', hour12: true }),
-        city: data.name + ",",
-        country: data.sys.country,
-        temp: data.main.temp.toFixed() + " C",
-        humidity: data.main.humidity + "%",
-        desc: data.weather[0].description
-    });
-
-    container.insertAdjacentHTML('afterbegin', forecastItem);
+  const forecastItem = currentWeatherHTMLTemplate({
+    week: now.toLocaleString("en-US", { weekday: "long" }),
+    date: now.toLocaleString("en-US", { month: "long", day: "numeric" }),
+    time: now.toLocaleString("en-US", { hour: "numeric", hour12: true }),
+    city: data.name + ",",
+    country: data.sys.country,
+    temp: data.main.temp.toFixed() + " C",
+    humidity: data.main.humidity + "%",
+    desc: data.weather[0].description,
+  });
+  container.insertAdjacentHTML("afterbegin", forecastItem);
 }
